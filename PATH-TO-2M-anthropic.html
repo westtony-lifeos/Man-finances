@@ -9,18 +9,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Bold Anthropic-inspired palette - Dark & Warm */
-            --primary: #E07A5F;
-            --primary-light: #F09A7A;
-            --primary-dark: #C45A3F;
+            /* True Anthropic palette - Dark & Warm */
+            --primary: #D4714D;
+            --primary-light: #E8926D;
+            --primary-dark: #B85A3A;
             --success: #6BBF8A;
             --success-light: rgba(107, 191, 138, 0.15);
             --success-dark: #4CA870;
-            --warning: #E9A84A;
-            --warning-light: rgba(233, 168, 74, 0.15);
-            --danger: #E05555;
-            --accent: #9B7FBF;
-            --accent-light: rgba(155, 127, 191, 0.15);
+            --warning: #D97706;
+            --warning-light: rgba(217, 119, 6, 0.15);
+            --danger: #DC2626;
+            --accent: #8B5CF6;
+            --accent-light: rgba(139, 92, 246, 0.15);
             --text: #F5F0EB;
             --text-light: #C4B8A8;
             --text-muted: #8A7F70;
@@ -30,23 +30,23 @@
             --border: #3D3835;
             --border-light: #332E2B;
 
-            /* Warm glowing shadows */
+            /* Warm glowing shadows - reduced for elegance */
             --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
-            --shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 40px rgba(224, 122, 95, 0.08);
-            --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.6), 0 0 60px rgba(224, 122, 95, 0.12);
-            --shadow-success: 0 4px 20px rgba(107, 191, 138, 0.25), 0 0 30px rgba(107, 191, 138, 0.15);
-            --shadow-warning: 0 4px 20px rgba(233, 168, 74, 0.25), 0 0 30px rgba(233, 168, 74, 0.15);
-            --shadow-accent: 0 4px 20px rgba(155, 127, 191, 0.25), 0 0 30px rgba(155, 127, 191, 0.15);
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.6);
+            --shadow-success: 0 4px 20px rgba(107, 191, 138, 0.2);
+            --shadow-warning: 0 4px 20px rgba(217, 119, 6, 0.2);
+            --shadow-accent: 0 4px 20px rgba(139, 92, 246, 0.2);
 
-            /* Bold warm gradients */
-            --gradient-hero: linear-gradient(135deg, #E07A5F 0%, #C45A3F 50%, #9B7FBF 100%);
+            /* True Anthropic gradients */
+            --gradient-hero: linear-gradient(135deg, #D4714D 0%, #B85A3A 50%, #8B5CF6 100%);
             --gradient-success: linear-gradient(135deg, #4CA870 0%, #6BBF8A 100%);
-            --gradient-warm: linear-gradient(135deg, #E9A84A 0%, #D4883A 100%);
+            --gradient-warm: linear-gradient(135deg, #D97706 0%, #B45309 100%);
 
-            /* Glow effects */
-            --glow-primary: 0 0 25px rgba(224, 122, 95, 0.4);
-            --glow-success: 0 0 25px rgba(107, 191, 138, 0.4);
-            --glow-warning: 0 0 25px rgba(233, 168, 74, 0.4);
+            /* Glow effects - reserved for key elements only */
+            --glow-primary: 0 0 20px rgba(212, 113, 77, 0.35);
+            --glow-success: 0 0 20px rgba(107, 191, 138, 0.35);
+            --glow-warning: 0 0 20px rgba(217, 119, 6, 0.35);
         }
 
         * {
@@ -76,6 +76,13 @@
 
         .page:last-child {
             page-break-after: avoid;
+        }
+
+        .page-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border), var(--primary), var(--border), transparent);
+            margin: 0 auto;
+            max-width: 6in;
         }
 
         /* Hero Header */
@@ -185,7 +192,7 @@
         }
 
         .card.highlight {
-            background: linear-gradient(135deg, rgba(224, 122, 95, 0.1) 0%, rgba(155, 127, 191, 0.1) 100%);
+            background: linear-gradient(135deg, rgba(212, 113, 77, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
             border-color: var(--primary);
             box-shadow: var(--shadow), var(--glow-primary);
         }
@@ -255,7 +262,7 @@
 
         /* Callout boxes */
         .callout {
-            background: linear-gradient(135deg, rgba(233, 168, 74, 0.12) 0%, rgba(212, 136, 58, 0.08) 100%);
+            background: linear-gradient(135deg, rgba(217, 119, 6, 0.12) 0%, rgba(180, 83, 9, 0.08) 100%);
             border-left: 5px solid var(--warning);
             padding: 1.25rem 1.5rem;
             border-radius: 0 16px 16px 0;
@@ -269,7 +276,7 @@
         }
 
         .callout.info {
-            background: linear-gradient(135deg, rgba(224, 122, 95, 0.12) 0%, rgba(155, 127, 191, 0.08) 100%);
+            background: linear-gradient(135deg, rgba(212, 113, 77, 0.12) 0%, rgba(139, 92, 246, 0.08) 100%);
             border-left-color: var(--primary);
         }
 
@@ -410,7 +417,7 @@
             font-weight: 700;
             font-size: 1rem;
             position: relative;
-            box-shadow: 0 4px 30px rgba(224, 122, 95, 0.4), 0 0 50px rgba(155, 127, 191, 0.25);
+            box-shadow: 0 4px 30px rgba(212, 113, 77, 0.35), 0 0 40px rgba(139, 92, 246, 0.2);
         }
 
         .progress-markers {
@@ -499,17 +506,17 @@
             height: 220px;
             border-radius: 50%;
             background: conic-gradient(
-                #E07A5F 0% 24%,
+                #D4714D 0% 24%,
                 #6BBF8A 24% 34%,
-                #E9A84A 34% 42%,
-                #9B7FBF 42% 50%,
-                #E05555 50% 56%,
-                #5FB5C4 56% 62%,
-                #C48FAA 62% 67%,
-                #6A6055 67% 100%
+                #D97706 34% 42%,
+                #8B5CF6 42% 50%,
+                #DC2626 50% 56%,
+                #E8926D 56% 62%,
+                #A78BFA 62% 67%,
+                #57534E 67% 100%
             );
             flex-shrink: 0;
-            box-shadow: var(--shadow-lg), 0 0 50px rgba(224, 122, 95, 0.25);
+            box-shadow: var(--shadow-lg);
             position: relative;
         }
 
@@ -568,7 +575,7 @@
             font-size: 1.1rem;
             font-weight: 700;
             flex-shrink: 0;
-            box-shadow: 0 4px 20px rgba(224, 122, 95, 0.4), 0 0 30px rgba(155, 127, 191, 0.2);
+            box-shadow: 0 4px 20px rgba(212, 113, 77, 0.35), 0 0 25px rgba(139, 92, 246, 0.15);
         }
 
         .step-content {
@@ -621,9 +628,9 @@
             top: 0;
             bottom: 0;
             width: 4px;
-            background: linear-gradient(180deg, #6BBF8A 0%, #E07A5F 40%, #9B7FBF 70%, #E9A84A 100%);
+            background: linear-gradient(180deg, #6BBF8A 0%, #D4714D 40%, #8B5CF6 70%, #D97706 100%);
             border-radius: 2px;
-            box-shadow: 0 0 15px rgba(224, 122, 95, 0.3);
+            box-shadow: 0 0 12px rgba(212, 113, 77, 0.25);
         }
 
         .roadmap-item {
@@ -752,7 +759,7 @@
         }
 
         .highlight-text {
-            background: linear-gradient(180deg, transparent 60%, rgba(233, 168, 74, 0.4) 60%);
+            background: linear-gradient(180deg, transparent 60%, rgba(217, 119, 6, 0.4) 60%);
             padding: 0 4px;
         }
 
@@ -866,7 +873,57 @@
         <div class="header">
             <h1>The Path to $2M</h1>
             <div class="subtitle" style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">Phase 1: Reduce Spending</div>
-            <div class="date" style="opacity: 0.9;">For Vicky and Tom Mansavage · January 2026</div>
+            <div class="date" style="opacity: 0.9;">For Vicki and Tom Mansavage · January 2026</div>
+        </div>
+
+        <!-- TRUE RETIREMENT FRAMING -->
+        <div class="callout info" style="margin-bottom: 1.5rem; border-left-color: var(--accent); background: linear-gradient(135deg, rgba(139, 92, 246, 0.12) 0%, rgba(212, 113, 77, 0.08) 100%);">
+            <strong style="color: var(--accent); font-size: 1.2rem;">What "True Retirement" Means</strong>
+            <p style="margin-top: 0.5rem;">Right now, you have paychecks from New Life Medical and distributions from Vivex. But if one day those stop, that's when true retirement begins.<br><br>From that point on, it would be just Social Security and your savings — nothing else. <em>That's what we want to be prepared for.</em></p>
+            <div style="margin-top: 1.25rem; padding: 1.25rem 1.5rem; background: var(--bg-warm); border: 1px solid var(--primary); border-radius: 12px;">
+                <div style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: var(--primary); margin-bottom: 0.5rem; font-weight: 600;">Our Goal Together</div>
+                <div style="font-size: 1.15rem; color: var(--text); font-weight: 500; line-height: 1.6;">Cut expenses. Invest wisely. Optimize taxes.<br><span style="font-size: 1.3rem; font-weight: 700; color: var(--text);">Grow your net worth to $2M+ so you can retire comfortably and live the good life.</span></div>
+            </div>
+        </div>
+
+        <!-- ROADMAP OVERVIEW AT THE TOP -->
+        <div style="background: var(--bg-soft); border-radius: 16px; padding: 1.5rem 2rem; margin-bottom: 2rem; border: 1px solid var(--border); box-shadow: var(--shadow);">
+            <h3 style="margin: 0 0 1rem 0; font-size: 1.3rem; color: var(--text);">Your Roadmap to $2 Million</h3>
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;">
+                <!-- Phase 1 - Current -->
+                <div style="text-align: center; padding: 1rem; background: linear-gradient(135deg, rgba(107, 191, 138, 0.2) 0%, rgba(76, 168, 112, 0.15) 100%); border-radius: 12px; border: 2px solid var(--success); box-shadow: 0 0 20px rgba(107, 191, 138, 0.25);">
+                    <div style="font-weight: 700; color: var(--success); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.25rem;">Phase 1</div>
+                    <div style="font-weight: 600; font-size: 1rem; margin-bottom: 0.5rem; color: var(--text);">Reduce Spending</div>
+                    <div style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px;">You'll Save</div>
+                    <div style="font-size: 1.1rem; color: var(--success); font-weight: 700;">$36K–$38K/yr</div>
+                    <div style="font-size: 0.75rem; color: var(--success); margin-top: 0.35rem; font-weight: 600;">↑ You Are Here</div>
+                </div>
+                <!-- Phase 2 -->
+                <div style="text-align: center; padding: 1rem; background: rgba(212, 113, 77, 0.08); border-radius: 12px; border: 1px solid var(--border);">
+                    <div style="font-weight: 700; color: var(--primary); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.25rem;">Phase 2</div>
+                    <div style="font-weight: 600; font-size: 1rem; margin-bottom: 0.5rem; color: var(--text);">Invest Wisely</div>
+                    <div style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px;">You'll Earn</div>
+                    <div style="font-size: 1.1rem; color: var(--primary); font-weight: 700;">$16K–$33K/yr</div>
+                </div>
+                <!-- Phase 3 -->
+                <div style="text-align: center; padding: 1rem; background: rgba(139, 92, 246, 0.08); border-radius: 12px; border: 1px solid var(--border);">
+                    <div style="font-weight: 700; color: var(--accent); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.25rem;">Phase 3</div>
+                    <div style="font-weight: 600; font-size: 1rem; margin-bottom: 0.5rem; color: var(--text);">Reduce Taxes</div>
+                    <div style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px;">You'll Keep</div>
+                    <div style="font-size: 1.1rem; color: var(--accent); font-weight: 700;">$20K–$50K/yr</div>
+                </div>
+                <!-- Phase 4 -->
+                <div style="text-align: center; padding: 1rem; background: rgba(217, 119, 6, 0.08); border-radius: 12px; border: 1px solid var(--border);">
+                    <div style="font-weight: 700; color: var(--warning); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.25rem;">Phase 4</div>
+                    <div style="font-weight: 600; font-size: 1rem; margin-bottom: 0.5rem; color: var(--text);">Estate Planning</div>
+                    <div style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px;">You'll Gain</div>
+                    <div style="font-size: 1.1rem; color: var(--warning); font-weight: 700;">Peace of Mind</div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 1.25rem; padding: 1rem; background: var(--gradient-hero); border-radius: 10px; box-shadow: var(--shadow);">
+                <span style="font-size: 0.85rem; color: rgba(255,255,255,0.85); text-transform: uppercase; letter-spacing: 0.5px;">Total Money Back in Your Pocket</span><br>
+                <span style="font-size: 1.5rem; font-weight: 800; color: white;">$72,500 – $120,500/year</span>
+            </div>
         </div>
 
         <div class="callout success">
@@ -877,10 +934,10 @@
 
         <h2>Where You Stand Today</h2>
 
-        <div class="data-label">
-            <span class="dot"></span>
-            Your 2025 Numbers (Full Year)
-        </div>
+        <h3 style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem;">
+            <span style="width: 10px; height: 10px; background: var(--success); border-radius: 50%; box-shadow: 0 0 12px var(--success);"></span>
+            Your 2025 Financial Snapshot
+        </h3>
 
         <div class="card-grid">
             <div class="card highlight">
@@ -909,30 +966,30 @@
 
         <div class="income-visual">
             <div class="income-bar">
-                <div class="income-segment" style="width: 48%; background: linear-gradient(135deg, #E07A5F, #F09A7A);">New Life</div>
-                <div class="income-segment" style="width: 22%; background: linear-gradient(135deg, #9B7FBF, #B59BD0);">Vivex</div>
+                <div class="income-segment" style="width: 48%; background: linear-gradient(135deg, #D4714D, #E8926D);">New Life</div>
+                <div class="income-segment" style="width: 22%; background: linear-gradient(135deg, #8B5CF6, #A78BFA);">Vivex</div>
                 <div class="income-segment" style="width: 16%; background: linear-gradient(135deg, #4CA870, #6BBF8A);">SS</div>
-                <div class="income-segment" style="width: 14%; background: linear-gradient(135deg, #E9A84A, #F0BD6A);">Other</div>
+                <div class="income-segment" style="width: 14%; background: linear-gradient(135deg, #D97706, #F59E0B);">Other</div>
             </div>
             <table style="width: 100%; margin-top: 1rem; box-shadow: none; border: none;">
                 <tbody>
                     <tr style="background: none; border: none;">
-                        <td style="border: none; padding: 0.5rem 0;"><span style="display: inline-block; width: 12px; height: 12px; background: #E07A5F; border-radius: 3px; margin-right: 0.5rem; box-shadow: 0 0 8px rgba(224, 122, 95, 0.5);"></span>New Life Medical</td>
+                        <td style="border: none; padding: 0.5rem 0;"><span style="display: inline-block; width: 12px; height: 12px; background: #D4714D; border-radius: 3px; margin-right: 0.5rem;"></span>New Life Medical</td>
                         <td style="border: none; padding: 0.5rem 0; text-align: right; font-weight: 600;">$161,651</td>
                         <td style="border: none; padding: 0.5rem 0; text-align: right; color: var(--text-muted);">$6,466/mo</td>
                     </tr>
                     <tr style="background: none; border: none;">
-                        <td style="border: none; padding: 0.5rem 0;"><span style="display: inline-block; width: 12px; height: 12px; background: #9B7FBF; border-radius: 3px; margin-right: 0.5rem; box-shadow: 0 0 8px rgba(155, 127, 191, 0.5);"></span>Vivex Biologics</td>
+                        <td style="border: none; padding: 0.5rem 0;"><span style="display: inline-block; width: 12px; height: 12px; background: #8B5CF6; border-radius: 3px; margin-right: 0.5rem;"></span>Vivex Biologics</td>
                         <td style="border: none; padding: 0.5rem 0; text-align: right; font-weight: 600;">$75,600</td>
                         <td style="border: none; padding: 0.5rem 0; text-align: right; color: var(--text-muted);">annual</td>
                     </tr>
                     <tr style="background: none; border: none;">
-                        <td style="border: none; padding: 0.5rem 0;"><span style="display: inline-block; width: 12px; height: 12px; background: #6BBF8A; border-radius: 3px; margin-right: 0.5rem; box-shadow: 0 0 8px rgba(107, 191, 138, 0.5);"></span>Social Security</td>
+                        <td style="border: none; padding: 0.5rem 0;"><span style="display: inline-block; width: 12px; height: 12px; background: #6BBF8A; border-radius: 3px; margin-right: 0.5rem;"></span>Social Security</td>
                         <td style="border: none; padding: 0.5rem 0; text-align: right; font-weight: 600;">$53,515</td>
                         <td style="border: none; padding: 0.5rem 0; text-align: right; color: var(--text-muted);">$4,460/mo</td>
                     </tr>
                     <tr style="background: none; border: none;">
-                        <td style="border: none; padding: 0.5rem 0;"><span style="display: inline-block; width: 12px; height: 12px; background: #E9A84A; border-radius: 3px; margin-right: 0.5rem; box-shadow: 0 0 8px rgba(233, 168, 74, 0.5);"></span>Other Income</td>
+                        <td style="border: none; padding: 0.5rem 0;"><span style="display: inline-block; width: 12px; height: 12px; background: #D97706; border-radius: 3px; margin-right: 0.5rem;"></span>Other Income</td>
                         <td style="border: none; padding: 0.5rem 0; text-align: right; font-weight: 600;">$46,583</td>
                         <td style="border: none; padding: 0.5rem 0; text-align: right; color: var(--text-muted);">deposits, interest</td>
                     </tr>
@@ -940,7 +997,7 @@
             </table>
         </div>
 
-        <h2>Your Path to $2 Million</h2>
+        <h2>Your Progress So Far</h2>
 
         <div class="progress-container">
             <div class="progress-header">
@@ -977,33 +1034,30 @@
                 <tr>
                     <td>Current pace</td>
                     <td>~9 years</td>
-                    <td>Vicky 78, Tom 84</td>
+                    <td>Vicki 78, Tom 84</td>
                 </tr>
                 <tr>
                     <td>With expense optimization</td>
                     <td>7–8 years</td>
-                    <td>Vicky 76–77, Tom 82–83</td>
+                    <td>Vicki 76–77, Tom 82–83</td>
                 </tr>
                 <tr class="highlight-row">
                     <td><strong>With tax optimization</strong></td>
                     <td><strong>5–6 years</strong></td>
-                    <td><strong>Vicky 74–75, Tom 80–81</strong></td>
+                    <td><strong>Vicki 74–75, Tom 80–81</strong></td>
                 </tr>
             </tbody>
         </table>
     </div>
 
+    <div class="page-divider"></div>
+
     <!-- PAGE 2: WHERE THE MONEY GOES -->
     <div class="page">
         <h2>Where Your Money Goes</h2>
 
-        <div class="data-label">
-            <span class="dot"></span>
-            Your 2025 Spending (Excluding Taxes)
-        </div>
-
         <p class="emphasis">
-            Of your <span class="highlight-text">$311,946 in total expenses</span>, $111,799 went to taxes (I'll address that in Phase 3).
+            Of your <span class="highlight-text">$311,946 in total expenses</span>, $111,799 went to taxes (we'll address that in Phase 3).
             The remaining <strong>$200,147 in living expenses</strong> — about <strong>$16,679 per month</strong> — breaks down like this:
         </p>
 
@@ -1012,42 +1066,42 @@
             <table style="flex: 1; box-shadow: none; border: none; margin: 0;">
                 <tbody>
                     <tr style="background: none;">
-                        <td style="border: none; padding: 0.4rem 0;"><span style="display: inline-block; width: 12px; height: 12px; background: #E07A5F; border-radius: 3px; margin-right: 0.5rem; box-shadow: 0 0 8px rgba(224, 122, 95, 0.5);"></span>Shopping</td>
+                        <td style="border: none; padding: 0.4rem 0;"><span style="display: inline-block; width: 12px; height: 12px; background: #D4714D; border-radius: 3px; margin-right: 0.5rem;"></span>Shopping</td>
                         <td style="border: none; padding: 0.4rem 0; text-align: right; font-weight: 600;">$48,223</td>
                         <td style="border: none; padding: 0.4rem 0; text-align: right; color: var(--text-muted); font-size: 0.9rem;">$4,019/mo</td>
                     </tr>
                     <tr style="background: none;">
-                        <td style="border: none; padding: 0.4rem 0;"><span style="display: inline-block; width: 12px; height: 12px; background: #6BBF8A; border-radius: 3px; margin-right: 0.5rem; box-shadow: 0 0 8px rgba(107, 191, 138, 0.5);"></span>Mortgage</td>
+                        <td style="border: none; padding: 0.4rem 0;"><span style="display: inline-block; width: 12px; height: 12px; background: #6BBF8A; border-radius: 3px; margin-right: 0.5rem;"></span>Mortgage</td>
                         <td style="border: none; padding: 0.4rem 0; text-align: right; font-weight: 600;">$19,328</td>
                         <td style="border: none; padding: 0.4rem 0; text-align: right; color: var(--text-muted); font-size: 0.9rem;">$1,611/mo</td>
                     </tr>
                     <tr style="background: none;">
-                        <td style="border: none; padding: 0.4rem 0;"><span style="display: inline-block; width: 12px; height: 12px; background: #E9A84A; border-radius: 3px; margin-right: 0.5rem; box-shadow: 0 0 8px rgba(233, 168, 74, 0.5);"></span>Groceries</td>
+                        <td style="border: none; padding: 0.4rem 0;"><span style="display: inline-block; width: 12px; height: 12px; background: #D97706; border-radius: 3px; margin-right: 0.5rem;"></span>Groceries</td>
                         <td style="border: none; padding: 0.4rem 0; text-align: right; font-weight: 600;">$16,650</td>
                         <td style="border: none; padding: 0.4rem 0; text-align: right; color: var(--text-muted); font-size: 0.9rem;">$1,388/mo</td>
                     </tr>
                     <tr style="background: none;">
-                        <td style="border: none; padding: 0.4rem 0;"><span style="display: inline-block; width: 12px; height: 12px; background: #9B7FBF; border-radius: 3px; margin-right: 0.5rem; box-shadow: 0 0 8px rgba(155, 127, 191, 0.5);"></span>Subscriptions</td>
+                        <td style="border: none; padding: 0.4rem 0;"><span style="display: inline-block; width: 12px; height: 12px; background: #8B5CF6; border-radius: 3px; margin-right: 0.5rem;"></span>Subscriptions</td>
                         <td style="border: none; padding: 0.4rem 0; text-align: right; font-weight: 600;">$16,230</td>
                         <td style="border: none; padding: 0.4rem 0; text-align: right; color: var(--text-muted); font-size: 0.9rem;">$1,352/mo</td>
                     </tr>
                     <tr style="background: none;">
-                        <td style="border: none; padding: 0.4rem 0;"><span style="display: inline-block; width: 12px; height: 12px; background: #E05555; border-radius: 3px; margin-right: 0.5rem; box-shadow: 0 0 8px rgba(224, 85, 85, 0.5);"></span>Home Improvement</td>
+                        <td style="border: none; padding: 0.4rem 0;"><span style="display: inline-block; width: 12px; height: 12px; background: #DC2626; border-radius: 3px; margin-right: 0.5rem;"></span>Home Improvement</td>
                         <td style="border: none; padding: 0.4rem 0; text-align: right; font-weight: 600;">$12,259</td>
                         <td style="border: none; padding: 0.4rem 0; text-align: right; color: var(--text-muted); font-size: 0.9rem;">$1,022/mo</td>
                     </tr>
                     <tr style="background: none;">
-                        <td style="border: none; padding: 0.4rem 0;"><span style="display: inline-block; width: 12px; height: 12px; background: #5FB5C4; border-radius: 3px; margin-right: 0.5rem; box-shadow: 0 0 8px rgba(95, 181, 196, 0.5);"></span>Restaurants</td>
+                        <td style="border: none; padding: 0.4rem 0;"><span style="display: inline-block; width: 12px; height: 12px; background: #E8926D; border-radius: 3px; margin-right: 0.5rem;"></span>Restaurants</td>
                         <td style="border: none; padding: 0.4rem 0; text-align: right; font-weight: 600;">$10,671</td>
                         <td style="border: none; padding: 0.4rem 0; text-align: right; color: var(--text-muted); font-size: 0.9rem;">$889/mo</td>
                     </tr>
                     <tr style="background: none;">
-                        <td style="border: none; padding: 0.4rem 0;"><span style="display: inline-block; width: 12px; height: 12px; background: #C48FAA; border-radius: 3px; margin-right: 0.5rem; box-shadow: 0 0 8px rgba(196, 143, 170, 0.5);"></span>Pets</td>
+                        <td style="border: none; padding: 0.4rem 0;"><span style="display: inline-block; width: 12px; height: 12px; background: #A78BFA; border-radius: 3px; margin-right: 0.5rem;"></span>Pets</td>
                         <td style="border: none; padding: 0.4rem 0; text-align: right; font-weight: 600;">$10,536</td>
                         <td style="border: none; padding: 0.4rem 0; text-align: right; color: var(--text-muted); font-size: 0.9rem;">$878/mo</td>
                     </tr>
                     <tr style="background: none;">
-                        <td style="border: none; padding: 0.4rem 0;"><span style="display: inline-block; width: 12px; height: 12px; background: #6A6055; border-radius: 3px; margin-right: 0.5rem;"></span>All Other</td>
+                        <td style="border: none; padding: 0.4rem 0;"><span style="display: inline-block; width: 12px; height: 12px; background: #57534E; border-radius: 3px; margin-right: 0.5rem;"></span>All Other</td>
                         <td style="border: none; padding: 0.4rem 0; text-align: right; font-weight: 600;">$66,250</td>
                         <td style="border: none; padding: 0.4rem 0; text-align: right; color: var(--text-muted); font-size: 0.9rem;">$5,521/mo</td>
                     </tr>
@@ -1113,26 +1167,24 @@
         <div class="callout">
             <strong>A Question to Consider</strong>
             <p>Is this intentional spending on things you love and use? Or is some of it autopilot buying
-            you barely remember? Even if 25% is impulse purchases, that's <strong>$12,000/year</strong>
+            you barely remember? Even if 25% is impulse purchases, that's <strong style="font-size: 1.3rem; color: var(--warning);">$12,000/year</strong>
             that you could invest toward your $2M goal.</p>
         </div>
 
     </div>
 
+    <div class="page-divider"></div>
+
     <!-- PAGE 3: THE RETIREMENT MATH -->
     <div class="page">
-        <h2>The Retirement Math</h2>
+        <h2>The Retirement Math — The 4% Rule</h2>
 
         <p class="emphasis" style="margin-bottom: 1.5rem;">
             <span class="highlight-text">What does it actually take to retire?</span>
         </p>
 
-        <p style="margin-bottom: 1.5rem; font-family: 'Source Serif 4', Georgia, serif; font-size: 1.05rem;">
-            Right now, you have paychecks from New Life Medical and distributions from Vivex. But if one day those stop, that's when true retirement begins. From that point on, it would be just Social Security and your savings — nothing else. That's what we want to be prepared for.
-        </p>
-
         <p style="margin-bottom: 2rem; font-family: 'Source Serif 4', Georgia, serif; font-size: 1.05rem;">
-            There's a simple rule: you can safely withdraw <strong>4% of your savings per year</strong> without running out of money. So the less you spend, the less you need saved.
+            There's a proven approach called <strong>the 4% rule</strong>: if you only withdraw 4% of your savings each year, your money can last forever. Here's why — your savings earn money while they sit there (around 6-7% per year in a balanced portfolio). If you take out less than they earn, you never run out. The leftover growth covers inflation and keeps your nest egg whole. <strong>So the less you spend each month, the less you need saved</strong> — and the sooner you reach "forever money."
         </p>
 
         <h3>Two Scenarios, Side by Side</h3>
@@ -1152,22 +1204,22 @@
                     <td class="text-center"><strong>$12,000</strong></td>
                 </tr>
                 <tr>
-                    <td>Social Security covers</td>
+                    <td>Social Security payments</td>
                     <td class="text-center">– $4,460</td>
                     <td class="text-center">– $4,460</td>
                 </tr>
                 <tr>
-                    <td>You need from savings (monthly)</td>
+                    <td>Withdrawal from savings (monthly)</td>
                     <td class="text-center">$12,219</td>
                     <td class="text-center">$7,540</td>
                 </tr>
                 <tr>
-                    <td>You need from savings (yearly)</td>
+                    <td>Withdrawal from savings (yearly)</td>
                     <td class="text-center">$146,628</td>
                     <td class="text-center">$90,480</td>
                 </tr>
                 <tr style="border-top: 3px solid var(--border);">
-                    <td><strong>Total savings required (4% rule)</strong></td>
+                    <td><strong>Savings needed to retire forever</strong></td>
                     <td class="text-center" style="background: var(--warning-light);"><strong style="font-size: 1.2rem; color: var(--danger);">$3.67M</strong></td>
                     <td class="text-center" style="background: var(--success-light);"><strong style="font-size: 1.2rem; color: var(--success-dark);">$2.26M</strong></td>
                 </tr>
@@ -1207,6 +1259,8 @@
         </div>
 
     </div>
+
+    <div class="page-divider"></div>
 
     <!-- PAGE 4: YOUR ACTION PLAN -->
     <div class="page">
@@ -1320,7 +1374,7 @@
                         <em>This is more about visibility than savings — it helps us spot opportunities in the future.</em>
                     </div>
                 </div>
-                <div class="step-savings" style="background: var(--bg-soft); color: var(--text-light); box-shadow: none;">Visibility</div>
+                <div class="step-savings">$0 — but priceless</div>
             </div>
         </div>
 
@@ -1332,19 +1386,47 @@
             </p>
         </div>
 
+        <!-- POWER OF SPENDING CUTS CALLOUT -->
+        <div class="callout success" style="margin-top: 1.5rem; background: linear-gradient(135deg, rgba(107, 191, 138, 0.15) 0%, rgba(76, 168, 112, 0.1) 100%); border-left-color: var(--success);">
+            <strong style="color: var(--success); font-size: 1.15rem;">Why Spending Cuts Are More Powerful Than Investing</strong>
+            <p style="margin-top: 0.75rem;">You might be wondering about the $110K sitting in your checking account. Here's something that might surprise you:</p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1rem;">
+                <div style="background: var(--bg-soft); padding: 1rem 1.25rem; border-radius: 12px; border: 1px solid var(--border);">
+                    <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.25rem;">Invest $110K at 6% =</div>
+                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--text);">$6,600/year</div>
+                </div>
+                <div style="background: rgba(107, 191, 138, 0.1); padding: 1rem 1.25rem; border-radius: 12px; border: 2px solid var(--success);">
+                    <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.25rem;">Close PayPal =</div>
+                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--success);">$21,200/year</div>
+                </div>
+            </div>
+            <p style="margin-top: 1rem; font-size: 1.1rem; font-weight: 600; color: var(--text);">Cutting spending is <span style="color: var(--success);">3x more powerful</span> than investing that same money.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.95rem; color: var(--text-light);">That's why we're starting with Phase 1. Every dollar you don't spend is a dollar you never have to earn, invest, or worry about. Phase 2 will still put your cash to work — but these spending cuts will always be your biggest lever.</p>
+        </div>
+
         <div class="callout info" style="margin-top: 1.5rem;">
             <strong>The Rest Comes With Practice</strong>
             <p>These 7 steps get you about 65% of the way to your $12,000/month target. The rest comes naturally as you build new habits — reviewing spending each quarter, being more intentional with purchases, and staying aware of where the money goes. This isn't a one-time fix; it's the start of a new pattern.</p>
         </div>
     </div>
 
+    <div class="page-divider"></div>
+
     <!-- PAGE 5: THE ROADMAP -->
     <div class="page">
+        <div style="text-align: center; margin-bottom: 2rem;">
+            <div style="display: flex; align-items: center; justify-content: center; gap: 1.5rem;">
+                <div style="flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--border), var(--primary));"></div>
+                <span style="font-family: 'Source Serif 4', Georgia, serif; font-size: 1.6rem; font-style: italic; color: var(--text); letter-spacing: 0.5px;">Let the Journey Begin</span>
+                <div style="flex: 1; height: 1px; background: linear-gradient(90deg, var(--primary), var(--border), transparent);"></div>
+            </div>
+        </div>
+
         <h2>Your Roadmap to $2 Million</h2>
 
         <p class="emphasis">
-            Reducing spending is Phase 1. The <span class="highlight-text">really big opportunities</span>
-            come in the next phases:
+            Phase 1 puts <span class="highlight-text">$36,000+ back in your pocket</span> this year.
+            And we're just getting started:
         </p>
 
         <div class="roadmap">
@@ -1389,19 +1471,28 @@
             </p>
         </div>
 
+        <!-- YOUR FIRST WIN -->
+        <div style="text-align: center; margin-bottom: 2rem; padding: 2rem; background: linear-gradient(135deg, rgba(107, 191, 138, 0.2) 0%, rgba(76, 168, 112, 0.15) 100%); border: 3px solid var(--success); border-radius: 20px; box-shadow: var(--shadow-success), 0 0 40px rgba(107, 191, 138, 0.3);">
+            <div style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--success); font-weight: 700; margin-bottom: 0.5rem;">🎯 Your First Win — Do This Today</div>
+            <div style="font-size: 2rem; font-weight: 800; color: var(--text); margin-bottom: 0.5rem;">Close Your PayPal Account</div>
+            <div style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 1rem;">PayPal.com → Settings → Account → Close Account</div>
+            <div style="font-size: 1.5rem; font-weight: 700; color: var(--success);">One action. $21,200/year. Done.</div>
+            <div style="margin-top: 1rem; font-size: 0.95rem; color: var(--text-muted); font-style: italic;">Everything else can wait until tomorrow.</div>
+        </div>
+
         <div class="closing-cta">
             <h3 style="margin-bottom: 1rem;">Your Action Plan — Next 7-10 Days</h3>
-            <div style="text-align: left; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem 2rem; font-size: 0.95rem;">
-                <div>☐ <strong>Close PayPal account</strong></div>
-                <div>☐ <strong>Call SiriusXM</strong> — ask for loyalty discount</div>
-                <div>☐ <strong>Cancel duplicate Netflix</strong></div>
-                <div>☐ <strong>Remove debit cards</strong> from shopping sites</div>
-                <div>☐ <strong>Cancel ESPN, NFL+</strong> (covered by YouTube TV)</div>
-                <div>☐ <strong>Set $300/month Apple budget</strong></div>
-                <div>☐ <strong>Downgrade Paramount+</strong> to Essential</div>
-                <div>☐ <strong>Set $300/month Temu budget</strong></div>
-                <div>☐ <strong>Review:</strong> Rocket Money, Il Makiage, Fox Nation, Stretched Fusion</div>
-                <div>☐ <strong>Set $400/month cash budget</strong></div>
+            <div style="text-align: left; display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem 2rem; font-size: 0.95rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem;"><span style="width: 16px; height: 16px; border: 2px solid rgba(255,255,255,0.5); border-radius: 50%; flex-shrink: 0;"></span><strong>Close PayPal account</strong></div>
+                <div style="display: flex; align-items: center; gap: 0.5rem;"><span style="width: 16px; height: 16px; border: 2px solid rgba(255,255,255,0.5); border-radius: 50%; flex-shrink: 0;"></span><strong>Call SiriusXM</strong> — loyalty discount</div>
+                <div style="display: flex; align-items: center; gap: 0.5rem;"><span style="width: 16px; height: 16px; border: 2px solid rgba(255,255,255,0.5); border-radius: 50%; flex-shrink: 0;"></span><strong>Cancel duplicate Netflix</strong></div>
+                <div style="display: flex; align-items: center; gap: 0.5rem;"><span style="width: 16px; height: 16px; border: 2px solid rgba(255,255,255,0.5); border-radius: 50%; flex-shrink: 0;"></span><strong>Remove debit cards</strong> from sites</div>
+                <div style="display: flex; align-items: center; gap: 0.5rem;"><span style="width: 16px; height: 16px; border: 2px solid rgba(255,255,255,0.5); border-radius: 50%; flex-shrink: 0;"></span><strong>Cancel ESPN, NFL+</strong></div>
+                <div style="display: flex; align-items: center; gap: 0.5rem;"><span style="width: 16px; height: 16px; border: 2px solid rgba(255,255,255,0.5); border-radius: 50%; flex-shrink: 0;"></span><strong>Set $300/mo Apple budget</strong></div>
+                <div style="display: flex; align-items: center; gap: 0.5rem;"><span style="width: 16px; height: 16px; border: 2px solid rgba(255,255,255,0.5); border-radius: 50%; flex-shrink: 0;"></span><strong>Downgrade Paramount+</strong></div>
+                <div style="display: flex; align-items: center; gap: 0.5rem;"><span style="width: 16px; height: 16px; border: 2px solid rgba(255,255,255,0.5); border-radius: 50%; flex-shrink: 0;"></span><strong>Set $300/mo Temu budget</strong></div>
+                <div style="display: flex; align-items: center; gap: 0.5rem;"><span style="width: 16px; height: 16px; border: 2px solid rgba(255,255,255,0.5); border-radius: 50%; flex-shrink: 0;"></span><strong>Review subscriptions</strong></div>
+                <div style="display: flex; align-items: center; gap: 0.5rem;"><span style="width: 16px; height: 16px; border: 2px solid rgba(255,255,255,0.5); border-radius: 50%; flex-shrink: 0;"></span><strong>Set $400/mo cash budget</strong></div>
             </div>
             <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.2); font-size: 0.95rem;">
                 <strong>7-Day Check-In:</strong> We'll review progress and answer questions.<br>
