@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Path to $2M — Mansavage Financial Review</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Bold Anthropic-inspired palette - Dark & Warm */
+            --primary: #E07A5F;
+            --primary-light: #F09A7A;
+            --primary-dark: #C45A3F;
+            --success: #6BBF8A;
+            --success-light: rgba(107, 191, 138, 0.15);
+            --success-dark: #4CA870;
+            --warning: #E9A84A;
+            --warning-light: rgba(233, 168, 74, 0.15);
+            --danger: #E05555;
+            --accent: #9B7FBF;
+            --accent-light: rgba(155, 127, 191, 0.15);
+            --text: #F5F0EB;
+            --text-light: #C4B8A8;
+            --text-muted: #8A7F70;
+            --bg: #1A1614;
+            --bg-soft: #252220;
+            --bg-warm: #2D2926;
+            --border: #3D3835;
+            --border-light: #332E2B;
+
+            /* Warm glowing shadows */
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 40px rgba(224, 122, 95, 0.08);
+            --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.6), 0 0 60px rgba(224, 122, 95, 0.12);
+            --shadow-success: 0 4px 20px rgba(107, 191, 138, 0.25), 0 0 30px rgba(107, 191, 138, 0.15);
+            --shadow-warning: 0 4px 20px rgba(233, 168, 74, 0.25), 0 0 30px rgba(233, 168, 74, 0.15);
+            --shadow-accent: 0 4px 20px rgba(155, 127, 191, 0.25), 0 0 30px rgba(155, 127, 191, 0.15);
+
+            /* Bold warm gradients */
+            --gradient-hero: linear-gradient(135deg, #E07A5F 0%, #C45A3F 50%, #9B7FBF 100%);
+            --gradient-success: linear-gradient(135deg, #4CA870 0%, #6BBF8A 100%);
+            --gradient-warm: linear-gradient(135deg, #E9A84A 0%, #D4883A 100%);
+
+            /* Glow effects */
+            --glow-primary: 0 0 25px rgba(224, 122, 95, 0.4);
+            --glow-success: 0 0 25px rgba(107, 191, 138, 0.4);
+            --glow-warning: 0 0 25px rgba(233, 168, 74, 0.4);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text);
+            line-height: 1.7;
+            background: var(--bg);
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .page {
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.5in;
+            min-height: 11in;
+            page-break-after: always;
+            position: relative;
+            background: var(--bg);
+        }
+
+        .page:last-child {
+            page-break-after: avoid;
+        }
+
+        /* Hero Header */
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 2rem 1.5rem;
+            background: var(--gradient-hero);
+            border-radius: 20px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 80%, rgba(255,255,255,0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 40%);
+            pointer-events: none;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 0.5rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            position: relative;
+        }
+
+        .header .subtitle {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.95);
+            font-weight: 500;
+        }
+
+        .header .date {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 0.75rem;
+            font-weight: 500;
+        }
+
+        /* Section Headers */
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.75rem;
+            color: var(--text);
+            margin: 2rem 0 1.25rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        h2::before {
+            content: '';
+            width: 4px;
+            height: 1.5rem;
+            background: var(--gradient-hero);
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            color: var(--text);
+            margin: 1.5rem 0 1rem;
+            font-weight: 600;
+        }
+
+        /* Cards */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.25rem;
+            margin: 1.25rem 0;
+        }
+
+        .card-grid.four {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .card-grid.three {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .card {
+            background: var(--bg-soft);
+            border-radius: 16px;
+            padding: 1.75rem;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary);
+        }
+
+        .card.highlight {
+            background: linear-gradient(135deg, rgba(224, 122, 95, 0.1) 0%, rgba(155, 127, 191, 0.1) 100%);
+            border-color: var(--primary);
+            box-shadow: var(--shadow), var(--glow-primary);
+        }
+
+        .card.success {
+            background: var(--success-light);
+            border-color: var(--success);
+            box-shadow: var(--shadow-success);
+        }
+
+        .card.warning {
+            background: var(--warning-light);
+            border-color: var(--warning);
+            box-shadow: var(--shadow-warning);
+        }
+
+        .card .label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .card .value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text);
+            letter-spacing: -0.5px;
+        }
+
+        .card .value.large {
+            font-size: 2.5rem;
+        }
+
+        .card .note {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-top: 0.5rem;
+            line-height: 1.5;
+        }
+
+        /* Executive Summary */
+        .exec-summary {
+            background: linear-gradient(135deg, rgba(107, 191, 138, 0.12) 0%, rgba(76, 168, 112, 0.08) 100%);
+            border: 2px solid var(--success);
+            border-radius: 16px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            box-shadow: var(--shadow-success);
+        }
+
+        .exec-summary .headline {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 0.5rem;
+        }
+
+        .exec-summary .subline {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--success);
+        }
+
+        /* Callout boxes */
+        .callout {
+            background: linear-gradient(135deg, rgba(233, 168, 74, 0.12) 0%, rgba(212, 136, 58, 0.08) 100%);
+            border-left: 5px solid var(--warning);
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 16px 16px 0;
+            margin: 1.5rem 0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .callout.success {
+            background: linear-gradient(135deg, rgba(107, 191, 138, 0.12) 0%, rgba(76, 168, 112, 0.08) 100%);
+            border-left-color: var(--success);
+        }
+
+        .callout.info {
+            background: linear-gradient(135deg, rgba(224, 122, 95, 0.12) 0%, rgba(155, 127, 191, 0.08) 100%);
+            border-left-color: var(--primary);
+        }
+
+        .callout strong {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            color: var(--text);
+        }
+
+        .callout p, .callout li {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        /* Data Year Label */
+        .data-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--bg-soft);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 0.5rem 1rem;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .data-label .dot {
+            width: 8px;
+            height: 8px;
+            background: var(--success);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--success);
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 1.25rem 0;
+            font-size: 0.95rem;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border);
+        }
+
+        th, td {
+            padding: 1.1rem 1.5rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+            line-height: 1.4;
+        }
+
+        th {
+            background: var(--bg-warm);
+            font-weight: 600;
+            color: var(--text);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        tbody tr {
+            background: var(--bg-soft);
+            transition: background 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: var(--bg-warm);
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        tbody tr.highlight-row {
+            background: rgba(107, 191, 138, 0.15);
+        }
+
+        tbody tr.highlight-row:hover {
+            background: rgba(107, 191, 138, 0.2);
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* Progress visualization */
+        .progress-container {
+            background: linear-gradient(135deg, var(--bg-soft) 0%, var(--bg-warm) 100%);
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .progress-header .percent {
+            color: var(--primary);
+        }
+
+        .progress-track {
+            height: 40px;
+            background: var(--bg);
+            border-radius: 20px;
+            position: relative;
+            overflow: visible;
+            box-shadow: inset 0 2px 8px rgba(0,0,0,0.4);
+            border: 1px solid var(--border);
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--gradient-hero);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 16px;
+            color: white;
+            font-weight: 700;
+            font-size: 1rem;
+            position: relative;
+            box-shadow: 0 4px 30px rgba(224, 122, 95, 0.4), 0 0 50px rgba(155, 127, 191, 0.25);
+        }
+
+        .progress-markers {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .progress-markers .goal {
+            color: var(--success);
+            font-weight: 700;
+        }
+
+        /* Income Breakdown Visual */
+        .income-visual {
+            background: var(--bg-soft);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border: 1px solid var(--border);
+        }
+
+        .income-bar {
+            display: flex;
+            height: 48px;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 1rem 0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .income-segment {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+        }
+
+        .income-segment:hover {
+            filter: brightness(1.1);
+        }
+
+        .income-legend {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.95rem;
+        }
+
+        .legend-dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 4px;
+            flex-shrink: 0;
+        }
+
+        .legend-amount {
+            margin-left: auto;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        /* Spending pie visualization */
+        .pie-container {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+            margin: 2rem 0;
+        }
+
+        .pie {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background: conic-gradient(
+                #E07A5F 0% 24%,
+                #6BBF8A 24% 34%,
+                #E9A84A 34% 42%,
+                #9B7FBF 42% 50%,
+                #E05555 50% 56%,
+                #5FB5C4 56% 62%,
+                #C48FAA 62% 67%,
+                #6A6055 67% 100%
+            );
+            flex-shrink: 0;
+            box-shadow: var(--shadow-lg), 0 0 50px rgba(224, 122, 95, 0.25);
+            position: relative;
+        }
+
+        .pie::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background: var(--bg);
+            border-radius: 50%;
+            box-shadow: inset 0 2px 8px rgba(0,0,0,0.4);
+        }
+
+        .pie-legend {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.6rem;
+            font-size: 0.9rem;
+        }
+
+        /* Step-by-step action items */
+        .step-container {
+            counter-reset: step-counter;
+        }
+
+        .step {
+            display: flex;
+            gap: 1.25rem;
+            padding: 1.25rem 1.5rem;
+            background: var(--bg-soft);
+            border-radius: 16px;
+            margin-bottom: 0.75rem;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            counter-increment: step-counter;
+        }
+
+        .step:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow-lg), var(--glow-primary);
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-hero);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            font-weight: 700;
+            flex-shrink: 0;
+            box-shadow: 0 4px 20px rgba(224, 122, 95, 0.4), 0 0 30px rgba(155, 127, 191, 0.2);
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 0.5rem;
+        }
+
+        .step-detail {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+
+        .step-detail strong {
+            color: var(--text);
+        }
+
+        .step-savings {
+            background: rgba(107, 191, 138, 0.15);
+            color: var(--success);
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+            box-shadow: var(--shadow-success);
+            border: 1px solid rgba(107, 191, 138, 0.3);
+        }
+
+        /* Roadmap Timeline */
+        .roadmap {
+            position: relative;
+            padding-left: 3rem;
+            margin: 2rem 0;
+        }
+
+        .roadmap::before {
+            content: '';
+            position: absolute;
+            left: 12px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(180deg, #6BBF8A 0%, #E07A5F 40%, #9B7FBF 70%, #E9A84A 100%);
+            border-radius: 2px;
+            box-shadow: 0 0 15px rgba(224, 122, 95, 0.3);
+        }
+
+        .roadmap-item {
+            position: relative;
+            padding-bottom: 2rem;
+        }
+
+        .roadmap-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .roadmap-item::before {
+            content: '';
+            position: absolute;
+            left: -3rem;
+            top: 6px;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--primary);
+            border: 4px solid white;
+            box-shadow: 0 0 0 4px var(--primary), var(--shadow);
+        }
+
+        .roadmap-item.current::before {
+            background: var(--success);
+            box-shadow: 0 0 0 4px var(--success), 0 0 20px rgba(0, 200, 83, 0.4);
+        }
+
+        .roadmap-item.future::before {
+            background: white;
+            border: 4px solid var(--border);
+            box-shadow: 0 0 0 2px var(--border);
+        }
+
+        .roadmap-card {
+            background: var(--bg-soft);
+            border-radius: 16px;
+            padding: 1.5rem;
+            border: 1px solid var(--border);
+        }
+
+        .roadmap-item.current .roadmap-card {
+            background: rgba(107, 191, 138, 0.1);
+            border-color: var(--success);
+            box-shadow: var(--glow-success);
+        }
+
+        .roadmap-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .roadmap-impact {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(107, 191, 138, 0.15);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            margin-top: 0.75rem;
+            font-weight: 600;
+            color: var(--success);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(107, 191, 138, 0.3);
+        }
+
+        /* Questions */
+        .question-box {
+            background: var(--bg-soft);
+            border: 2px dashed var(--border);
+            border-radius: 16px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            padding-left: 4rem;
+        }
+
+        .question-box::before {
+            content: attr(data-num);
+            position: absolute;
+            left: 1.25rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 32px;
+            height: 32px;
+            background: var(--gradient-hero);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .question-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.35rem;
+        }
+
+        .question-text {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-size: 1.05rem;
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .question-space {
+            border-bottom: 2px solid var(--border);
+            height: 2.5rem;
+            margin-top: 0.75rem;
+        }
+
+        /* Emphasis text */
+        .emphasis {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-size: 1.15rem;
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        .highlight-text {
+            background: linear-gradient(180deg, transparent 60%, rgba(233, 168, 74, 0.4) 60%);
+            padding: 0 4px;
+        }
+
+        /* Footer */
+        .page-footer {
+            position: absolute;
+            bottom: 0.5in;
+            left: 0.5in;
+            right: 0.5in;
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .page-number {
+            font-weight: 600;
+            color: var(--text-light);
+        }
+
+        /* Closing CTA */
+        .closing-cta {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 2rem;
+            background: var(--gradient-hero);
+            border-radius: 20px;
+            color: white;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .closing-cta h3 {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 0 0.5rem 0;
+        }
+
+        .closing-cta p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            margin-bottom: 1rem;
+        }
+
+        .closing-cta .next-step {
+            background: rgba(255,255,255,0.2);
+            border-radius: 12px;
+            padding: 1rem 1.5rem;
+            margin-top: 1rem;
+            font-size: 1rem;
+        }
+
+        /* Footnote */
+        .footnote {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-style: italic;
+            margin-top: 1rem;
+            padding: 0.75rem 1rem;
+            background: var(--bg-soft);
+            border-radius: 8px;
+            border-left: 3px solid var(--border);
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .page {
+                margin: 0;
+                padding: 0.4in;
+            }
+
+            .card:hover,
+            .step:hover {
+                transform: none;
+                box-shadow: var(--shadow);
+            }
+
+            @page {
+                margin: 0.25in;
+            }
+        }
+
+        /* Shopping definition - prominent callout */
+        .shopping-note {
+            font-size: 1.1rem;
+            color: var(--text);
+            background: linear-gradient(135deg, rgba(107, 191, 138, 0.12) 0%, rgba(76, 168, 112, 0.08) 100%);
+            padding: 1.25rem 1.5rem;
+            border-radius: 12px;
+            margin: 1.5rem 0;
+            border: 2px solid var(--success);
+            box-shadow: var(--shadow-success);
+        }
+
+        .shopping-note strong {
+            display: block;
+            font-size: 1.2rem;
+            color: var(--success);
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- PAGE 1: THE SNAPSHOT -->
+    <div class="page">
+        <div class="header">
+            <h1>The Path to $2M</h1>
+            <div class="subtitle" style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">Phase 1: Reduce Spending</div>
+            <div class="date" style="opacity: 0.9;">For Vicky and Tom Mansavage · January 2026</div>
+        </div>
+
+        <div class="callout success">
+            <strong>The Good News First</strong>
+            <p>You've built over $1 million in net worth while managing a household with a 93-year-old requiring full-time care. You saved $25,403 last year. That's real.
+            This review isn't about what's wrong — it's about making smart adjustments to reach your goals faster.</p>
+        </div>
+
+        <h2>Where You Stand Today</h2>
+
+        <div class="data-label">
+            <span class="dot"></span>
+            Your 2025 Numbers (Full Year)
+        </div>
+
+        <div class="card-grid">
+            <div class="card highlight">
+                <div class="label">Net Worth</div>
+                <div class="value large">$1.07M</div>
+                <div class="note">Halfway to your $2M goal</div>
+            </div>
+            <div class="card">
+                <div class="label">2025 Income</div>
+                <div class="value">$337,349</div>
+                <div class="note">See breakdown below</div>
+            </div>
+            <div class="card">
+                <div class="label">2025 Expenses</div>
+                <div class="value">$311,946</div>
+                <div class="note">Including $111,799 in taxes</div>
+            </div>
+            <div class="card success">
+                <div class="label">You Saved</div>
+                <div class="value">$25,403</div>
+                <div class="note">7.5% savings rate</div>
+            </div>
+        </div>
+
+        <h3>Where Your Income Comes From</h3>
+
+        <div class="income-visual">
+            <div class="income-bar">
+                <div class="income-segment" style="width: 48%; background: linear-gradient(135deg, #E07A5F, #F09A7A);">New Life</div>
+                <div class="income-segment" style="width: 22%; background: linear-gradient(135deg, #9B7FBF, #B59BD0);">Vivex</div>
+                <div class="income-segment" style="width: 16%; background: linear-gradient(135deg, #4CA870, #6BBF8A);">SS</div>
+                <div class="income-segment" style="width: 14%; background: linear-gradient(135deg, #E9A84A, #F0BD6A);">Other</div>
+            </div>
+            <table style="width: 100%; margin-top: 1rem; box-shadow: none; border: none;">
+                <tbody>
+                    <tr style="background: none; border: none;">
+                        <td style="border: none; padding: 0.5rem 0;"><span style="display: inline-block; width: 12px; height: 12px; background: #E07A5F; border-radius: 3px; margin-right: 0.5rem; box-shadow: 0 0 8px rgba(224, 122, 95, 0.5);"></span>New Life Medical</td>
+                        <td style="border: none; padding: 0.5rem 0; text-align: right; font-weight: 600;">$161,651</td>
+                        <td style="border: none; padding: 0.5rem 0; text-align: right; color: var(--text-muted);">$6,466/mo</td>
+                    </tr>
+                    <tr style="background: none; border: none;">
+                        <td style="border: none; padding: 0.5rem 0;"><span style="display: inline-block; width: 12px; height: 12px; background: #9B7FBF; border-radius: 3px; margin-right: 0.5rem; box-shadow: 0 0 8px rgba(155, 127, 191, 0.5);"></span>Vivex Biologics</td>
+                        <td style="border: none; padding: 0.5rem 0; text-align: right; font-weight: 600;">$75,600</td>
+                        <td style="border: none; padding: 0.5rem 0; text-align: right; color: var(--text-muted);">annual</td>
+                    </tr>
+                    <tr style="background: none; border: none;">
+                        <td style="border: none; padding: 0.5rem 0;"><span style="display: inline-block; width: 12px; height: 12px; background: #6BBF8A; border-radius: 3px; margin-right: 0.5rem; box-shadow: 0 0 8px rgba(107, 191, 138, 0.5);"></span>Social Security</td>
+                        <td style="border: none; padding: 0.5rem 0; text-align: right; font-weight: 600;">$53,515</td>
+                        <td style="border: none; padding: 0.5rem 0; text-align: right; color: var(--text-muted);">$4,460/mo</td>
+                    </tr>
+                    <tr style="background: none; border: none;">
+                        <td style="border: none; padding: 0.5rem 0;"><span style="display: inline-block; width: 12px; height: 12px; background: #E9A84A; border-radius: 3px; margin-right: 0.5rem; box-shadow: 0 0 8px rgba(233, 168, 74, 0.5);"></span>Other Income</td>
+                        <td style="border: none; padding: 0.5rem 0; text-align: right; font-weight: 600;">$46,583</td>
+                        <td style="border: none; padding: 0.5rem 0; text-align: right; color: var(--text-muted);">deposits, interest</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>Your Path to $2 Million</h2>
+
+        <div class="progress-container">
+            <div class="progress-header">
+                <span>Progress to Goal</span>
+                <span class="percent">53% Complete</span>
+            </div>
+            <div class="progress-track">
+                <div class="progress-fill" style="width: 53%;">$1.07M</div>
+            </div>
+            <div class="progress-markers">
+                <span>$0</span>
+                <span>$500K</span>
+                <span>$1M</span>
+                <span>$1.5M</span>
+                <span class="goal">$2M Goal</span>
+            </div>
+        </div>
+
+        <h3>How Long to Get There?</h3>
+
+        <p style="font-size: 0.95rem; color: var(--text-light); margin-bottom: 1rem; font-style: italic;">
+            These estimates assume 5% annual investment returns. Phase 2 will audit your investments to maximize safe returns.
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Scenario</th>
+                    <th>Years to $2M</th>
+                    <th>You'll Be...</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Current pace</td>
+                    <td>~9 years</td>
+                    <td>Vicky 78, Tom 84</td>
+                </tr>
+                <tr>
+                    <td>With expense optimization</td>
+                    <td>7–8 years</td>
+                    <td>Vicky 76–77, Tom 82–83</td>
+                </tr>
+                <tr class="highlight-row">
+                    <td><strong>With tax optimization</strong></td>
+                    <td><strong>5–6 years</strong></td>
+                    <td><strong>Vicky 74–75, Tom 80–81</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- PAGE 2: WHERE THE MONEY GOES -->
+    <div class="page">
+        <h2>Where Your Money Goes</h2>
+
+        <div class="data-label">
+            <span class="dot"></span>
+            Your 2025 Spending (Excluding Taxes)
+        </div>
+
+        <p class="emphasis">
+            Of your <span class="highlight-text">$311,946 in total expenses</span>, $111,799 went to taxes (I'll address that in Phase 3).
+            The remaining <strong>$200,147 in living expenses</strong> — about <strong>$16,679 per month</strong> — breaks down like this:
+        </p>
+
+        <div class="pie-container">
+            <div class="pie"></div>
+            <table style="flex: 1; box-shadow: none; border: none; margin: 0;">
+                <tbody>
+                    <tr style="background: none;">
+                        <td style="border: none; padding: 0.4rem 0;"><span style="display: inline-block; width: 12px; height: 12px; background: #E07A5F; border-radius: 3px; margin-right: 0.5rem; box-shadow: 0 0 8px rgba(224, 122, 95, 0.5);"></span>Shopping</td>
+                        <td style="border: none; padding: 0.4rem 0; text-align: right; font-weight: 600;">$48,223</td>
+                        <td style="border: none; padding: 0.4rem 0; text-align: right; color: var(--text-muted); font-size: 0.9rem;">$4,019/mo</td>
+                    </tr>
+                    <tr style="background: none;">
+                        <td style="border: none; padding: 0.4rem 0;"><span style="display: inline-block; width: 12px; height: 12px; background: #6BBF8A; border-radius: 3px; margin-right: 0.5rem; box-shadow: 0 0 8px rgba(107, 191, 138, 0.5);"></span>Mortgage</td>
+                        <td style="border: none; padding: 0.4rem 0; text-align: right; font-weight: 600;">$19,328</td>
+                        <td style="border: none; padding: 0.4rem 0; text-align: right; color: var(--text-muted); font-size: 0.9rem;">$1,611/mo</td>
+                    </tr>
+                    <tr style="background: none;">
+                        <td style="border: none; padding: 0.4rem 0;"><span style="display: inline-block; width: 12px; height: 12px; background: #E9A84A; border-radius: 3px; margin-right: 0.5rem; box-shadow: 0 0 8px rgba(233, 168, 74, 0.5);"></span>Groceries</td>
+                        <td style="border: none; padding: 0.4rem 0; text-align: right; font-weight: 600;">$16,650</td>
+                        <td style="border: none; padding: 0.4rem 0; text-align: right; color: var(--text-muted); font-size: 0.9rem;">$1,388/mo</td>
+                    </tr>
+                    <tr style="background: none;">
+                        <td style="border: none; padding: 0.4rem 0;"><span style="display: inline-block; width: 12px; height: 12px; background: #9B7FBF; border-radius: 3px; margin-right: 0.5rem; box-shadow: 0 0 8px rgba(155, 127, 191, 0.5);"></span>Subscriptions</td>
+                        <td style="border: none; padding: 0.4rem 0; text-align: right; font-weight: 600;">$16,230</td>
+                        <td style="border: none; padding: 0.4rem 0; text-align: right; color: var(--text-muted); font-size: 0.9rem;">$1,352/mo</td>
+                    </tr>
+                    <tr style="background: none;">
+                        <td style="border: none; padding: 0.4rem 0;"><span style="display: inline-block; width: 12px; height: 12px; background: #E05555; border-radius: 3px; margin-right: 0.5rem; box-shadow: 0 0 8px rgba(224, 85, 85, 0.5);"></span>Home Improvement</td>
+                        <td style="border: none; padding: 0.4rem 0; text-align: right; font-weight: 600;">$12,259</td>
+                        <td style="border: none; padding: 0.4rem 0; text-align: right; color: var(--text-muted); font-size: 0.9rem;">$1,022/mo</td>
+                    </tr>
+                    <tr style="background: none;">
+                        <td style="border: none; padding: 0.4rem 0;"><span style="display: inline-block; width: 12px; height: 12px; background: #5FB5C4; border-radius: 3px; margin-right: 0.5rem; box-shadow: 0 0 8px rgba(95, 181, 196, 0.5);"></span>Restaurants</td>
+                        <td style="border: none; padding: 0.4rem 0; text-align: right; font-weight: 600;">$10,671</td>
+                        <td style="border: none; padding: 0.4rem 0; text-align: right; color: var(--text-muted); font-size: 0.9rem;">$889/mo</td>
+                    </tr>
+                    <tr style="background: none;">
+                        <td style="border: none; padding: 0.4rem 0;"><span style="display: inline-block; width: 12px; height: 12px; background: #C48FAA; border-radius: 3px; margin-right: 0.5rem; box-shadow: 0 0 8px rgba(196, 143, 170, 0.5);"></span>Pets</td>
+                        <td style="border: none; padding: 0.4rem 0; text-align: right; font-weight: 600;">$10,536</td>
+                        <td style="border: none; padding: 0.4rem 0; text-align: right; color: var(--text-muted); font-size: 0.9rem;">$878/mo</td>
+                    </tr>
+                    <tr style="background: none;">
+                        <td style="border: none; padding: 0.4rem 0;"><span style="display: inline-block; width: 12px; height: 12px; background: #6A6055; border-radius: 3px; margin-right: 0.5rem;"></span>All Other</td>
+                        <td style="border: none; padding: 0.4rem 0; text-align: right; font-weight: 600;">$66,250</td>
+                        <td style="border: none; padding: 0.4rem 0; text-align: right; color: var(--text-muted); font-size: 0.9rem;">$5,521/mo</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem; font-style: italic;">
+            "All Other" includes cash withdrawals, medical, furniture, auto, utilities, insurance, and travel. We'll examine All Other in our quarterly reviews.
+        </p>
+
+        <div class="shopping-note">
+            <strong>What's in "Shopping"?</strong> Temu, Amazon, PayPal purchases, Walmart, Target, TJ Maxx, Macy's, and other general retail stores.
+        </div>
+
+        <h3>Fixed vs. Controllable Spending</h3>
+
+        <div class="card-grid">
+            <div class="card">
+                <div class="label">Fixed Costs</div>
+                <div class="value">$50K/yr</div>
+                <div class="note">$4,167/mo</div>
+                <div style="margin-top: 0.75rem; font-size: 0.95rem; color: var(--text-light);">
+                    Mortgage, utilities, insurance, medical — can't easily change
+                </div>
+            </div>
+            <div class="card highlight">
+                <div class="label">Controllable</div>
+                <div class="value">$150K/yr</div>
+                <div class="note">$12,512/mo</div>
+                <div style="margin-top: 0.75rem; font-size: 0.95rem; color: var(--text);">
+                    <strong>75% of spending — your choice</strong>
+                </div>
+            </div>
+        </div>
+
+        <h3>Let's Talk About Shopping</h3>
+
+        <p style="margin-bottom: 1rem; font-family: 'Source Serif 4', Georgia, serif; font-size: 1.05rem;">
+            At <strong>$48,223 per year</strong>, shopping is your biggest spending category.
+            Here's what that looks like:
+        </p>
+
+        <div class="card-grid four">
+            <div class="card">
+                <div class="label">Per Day</div>
+                <div class="value">$132</div>
+            </div>
+            <div class="card">
+                <div class="label">Per Week</div>
+                <div class="value">$927</div>
+            </div>
+            <div class="card">
+                <div class="label">Per Month</div>
+                <div class="value">$4,019</div>
+            </div>
+            <div class="card">
+                <div class="label">Per Year</div>
+                <div class="value">$48,223</div>
+            </div>
+        </div>
+
+        <div class="callout">
+            <strong>A Question to Consider</strong>
+            <p>Is this intentional spending on things you love and use? Or is some of it autopilot buying
+            you barely remember? Even if 25% is impulse purchases, that's <strong>$12,000/year</strong>
+            that you could invest toward your $2M goal.</p>
+        </div>
+
+    </div>
+
+    <!-- PAGE 3: THE RETIREMENT MATH -->
+    <div class="page">
+        <h2>The Retirement Math</h2>
+
+        <p class="emphasis" style="margin-bottom: 1.5rem;">
+            <span class="highlight-text">What does it actually take to retire?</span>
+        </p>
+
+        <p style="margin-bottom: 1.5rem; font-family: 'Source Serif 4', Georgia, serif; font-size: 1.05rem;">
+            Right now, you have paychecks from New Life Medical and distributions from Vivex. But if one day those stop, that's when true retirement begins. From that point on, it would be just Social Security and your savings — nothing else. That's what we want to be prepared for.
+        </p>
+
+        <p style="margin-bottom: 2rem; font-family: 'Source Serif 4', Georgia, serif; font-size: 1.05rem;">
+            There's a simple rule: you can safely withdraw <strong>4% of your savings per year</strong> without running out of money. So the less you spend, the less you need saved.
+        </p>
+
+        <h3>Two Scenarios, Side by Side</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th class="text-center" style="background: var(--warning-light); color: var(--text);">Current Spending</th>
+                    <th class="text-center" style="background: var(--success-light); color: var(--text);">Target Spending</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monthly spending</td>
+                    <td class="text-center"><strong>$16,679</strong></td>
+                    <td class="text-center"><strong>$12,000</strong></td>
+                </tr>
+                <tr>
+                    <td>Social Security covers</td>
+                    <td class="text-center">– $4,460</td>
+                    <td class="text-center">– $4,460</td>
+                </tr>
+                <tr>
+                    <td>You need from savings (monthly)</td>
+                    <td class="text-center">$12,219</td>
+                    <td class="text-center">$7,540</td>
+                </tr>
+                <tr>
+                    <td>You need from savings (yearly)</td>
+                    <td class="text-center">$146,628</td>
+                    <td class="text-center">$90,480</td>
+                </tr>
+                <tr style="border-top: 3px solid var(--border);">
+                    <td><strong>Total savings required (4% rule)</strong></td>
+                    <td class="text-center" style="background: var(--warning-light);"><strong style="font-size: 1.2rem; color: var(--danger);">$3.67M</strong></td>
+                    <td class="text-center" style="background: var(--success-light);"><strong style="font-size: 1.2rem; color: var(--success-dark);">$2.26M</strong></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="exec-summary" style="margin-top: 2rem; background: linear-gradient(135deg, rgba(107, 191, 138, 0.12) 0%, rgba(76, 168, 112, 0.08) 100%);">
+            <div class="headline" style="font-size: 1.1rem;">The Insight</div>
+            <div class="subline" style="color: var(--text); font-size: 1.2rem; line-height: 1.6;">
+                At current spending, you'd need <strong style="color: var(--danger);">$3.67 million</strong> — out of reach.<br>
+                At $12,000/month, you need <strong style="color: var(--success-dark);">$2.26 million</strong> — right at your goal.
+            </div>
+        </div>
+
+        <h2 style="margin-top: 2.5rem;">The Goal</h2>
+
+        <div class="card-grid">
+            <div class="card warning">
+                <div class="label">Where You Are</div>
+                <div class="value large">$16,679</div>
+                <div class="note">per month</div>
+            </div>
+            <div class="card success">
+                <div class="label">Where You're Headed</div>
+                <div class="value large">$12,000</div>
+                <div class="note">per month</div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 1.5rem; padding: 1.5rem; background: var(--bg-soft); border-radius: 16px;">
+            <div style="font-size: 1rem; color: var(--text-light); margin-bottom: 0.5rem;">Gap to close</div>
+            <div style="font-size: 2.5rem; font-weight: 700; color: var(--text);">$4,679/month</div>
+            <div style="font-size: 1.1rem; color: var(--text-light); margin-top: 0.5rem;">$56,147/year</div>
+            <p style="margin-top: 1rem; font-size: 1.05rem; color: var(--text);">
+                <strong>Close this gap, and your $2M goal becomes your SAFE retirement.</strong>
+            </p>
+        </div>
+
+    </div>
+
+    <!-- PAGE 4: YOUR ACTION PLAN -->
+    <div class="page">
+        <h2>Your Action Plan</h2>
+        <h3 style="color: var(--success); margin-top: 0; margin-bottom: 1.5rem; font-size: 1.4rem;">Phase 1: Reduce Spending</h3>
+
+        <p class="emphasis">
+            Here are <span class="highlight-text">7 steps</span> to reduce your spending toward the $12,000/month target.
+            Total potential savings: <strong>$36,500–$37,500/year</strong>.
+        </p>
+
+        <div class="step-container">
+            <div class="step" style="border-color: var(--success); background: linear-gradient(135deg, rgba(107, 191, 138, 0.15) 0%, rgba(76, 168, 112, 0.1) 100%); box-shadow: var(--shadow), 0 0 40px rgba(107, 191, 138, 0.2);">
+                <div class="step-number" style="background: var(--gradient-success); box-shadow: 0 4px 20px rgba(107, 191, 138, 0.5), 0 0 40px rgba(107, 191, 138, 0.3);">1</div>
+                <div class="step-content">
+                    <div class="step-title" style="font-size: 1.3rem;">This Is the Big One: Close PayPal</div>
+                    <div class="step-detail">
+                        <strong style="font-size: 1.1rem;">One action. $21,200 in annual savings. This single step can launch you toward your $2 million goal.</strong><br><br>
+                        In 2025, <strong>$29,272 flowed through PayPal</strong> — that's $2,439/month across hundreds of transactions. Most of it was impulse purchases you probably don't remember. About $8,000 was legitimate spending (airlines, retailers) that you'll continue with credit cards.<br><br>
+                        <strong>To close:</strong> PayPal.com → Settings → Account → Close Account<br><br>
+                        This automatically cancels all those waste subscriptions (Am Apps, Appcharge, Dressly, and more) plus dozens of small purchases that add up fast.<br><br>
+                        <strong>Don't worry:</strong> Sites like American Airlines, Wayfair, and Weight Watchers all accept credit cards directly — you won't lose access to anything you actually need. And Tom can still enjoy Temu with a credit card (see Step 3).
+                    </div>
+                </div>
+                <div class="step-savings" style="font-size: 1.2rem; padding: 0.75rem 1.25rem;">$21,200/yr</div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <div class="step-title">Cancel Duplicate Streaming</div>
+                    <div class="step-detail">
+                        • <strong>Netflix:</strong> You have 2 accounts charging $19.77 each — cancel one → $237/yr<br>
+                        • <strong>ESPN:</strong> Already included in YouTube TV — cancel standalone → $166/yr<br>
+                        • <strong>NFL+:</strong> YouTube TV has NFL Network — cancel → $84/yr<br>
+                        • <strong>Paramount+:</strong> Downgrade to Essential tier → $59/yr
+                    </div>
+                </div>
+                <div class="step-savings">$546/yr</div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <div class="step-title">Set $300/Month Budgets for Apple and Temu</div>
+                    <div class="step-detail">
+                        <strong>Apple:</strong> Currently $1,132/month ($13,580/year) — 282 transactions in 2025<br>
+                        Go to Settings → Apple ID → Subscriptions and review what's active. Keep what you love, cancel what you forgot about.<br>
+                        <strong>New budget:</strong> $300/month → <strong>saves $9,980/year</strong><br><br>
+                        <strong>Temu:</strong> Currently $672/month ($8,065/year) — 329 transactions in 2025<br>
+                        Tom enjoys Temu, and that's great! Just move it to a credit card (since PayPal is closed) and set a monthly budget.<br>
+                        <strong>New budget:</strong> $300/month → <strong>saves $4,465/year</strong><br><br>
+                        <em>$300/month each is still plenty for apps, subscriptions, and fun purchases — just with more intention.</em>
+                    </div>
+                </div>
+                <div class="step-savings">$14,445/yr</div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <div class="step-title">Review These Subscriptions</div>
+                    <div class="step-detail">
+                        Take a look at these and decide which ones you're actually using:<br><br>
+                        • <strong>Rocket Money:</strong> $120/yr — we can track finances together now<br>
+                        • <strong>Il Makiage:</strong> $220/yr — subscription makeup, keep if you love it<br>
+                        • <strong>Fox Nation:</strong> $121/yr — keep if someone watches it<br>
+                        • <strong>Stretched Fusion:</strong> $96/yr — keep if the Pilates videos get used
+                    </div>
+                </div>
+                <div class="step-savings">$120–$557/yr</div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <div class="step-title">Negotiate SiriusXM</div>
+                    <div class="step-detail">
+                        <strong>Current cost:</strong> $414/year<br><br>
+                        Give them a call at <strong>1-866-635-5020</strong> and ask if there are any promotions or loyalty discounts available. They often have deals for long-time subscribers — worth a 10-minute call to find out.
+                    </div>
+                </div>
+                <div class="step-savings">$100–$200/yr</div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">6</div>
+                <div class="step-content">
+                    <div class="step-title">Protect Your Cash — Switch to Credit Cards</div>
+                    <div class="step-detail">
+                        <strong>A simple safety step.</strong> Debit cards pull directly from your bank accounts. Credit cards add a layer of protection between your purchases and your savings.<br><br>
+                        <strong>Benefits of using 1-2 credit cards:</strong><br>
+                        • <strong>Better fraud protection</strong> — disputed charges don't touch your savings<br>
+                        • <strong>Cash back rewards</strong> — 2% on spending adds up to about $400/year<br>
+                        • <strong>Built-in limit</strong> — an extra safeguard for your savings<br>
+                        • <strong>Easier tracking</strong> — all spending shows up in one place
+                    </div>
+                </div>
+                <div class="step-savings">$400+/yr</div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">7</div>
+                <div class="step-content">
+                    <div class="step-title">Set a Cash Budget</div>
+                    <div class="step-detail">
+                        <strong>Current cash withdrawals:</strong> $798/month ($9,574/year)<br>
+                        Cash is hard to track — once it's withdrawn, we lose visibility into where it goes.<br><br>
+                        <strong>Suggested target:</strong> $200/month each ($400/month total)<br>
+                        Using cards for most purchases helps us see spending patterns during quarterly reviews. Keep cash for the things that need it (tips, farmers markets, small vendors).<br><br>
+                        <em>This is more about visibility than savings — it helps us spot opportunities in the future.</em>
+                    </div>
+                </div>
+                <div class="step-savings" style="background: var(--bg-soft); color: var(--text-light); box-shadow: none;">Visibility</div>
+            </div>
+        </div>
+
+        <div class="exec-summary" style="margin-top: 1rem;">
+            <div class="headline">Total Phase 1 Savings</div>
+            <div class="subline">$36,500–$37,500/year</div>
+            <p style="margin-top: 0.5rem; font-size: 1rem; color: var(--text);">
+                That's <strong>about $3,000/month</strong> toward your $12,000/month target — <strong>about 65% of the way there.</strong>
+            </p>
+        </div>
+
+        <div class="callout info" style="margin-top: 1.5rem;">
+            <strong>The Rest Comes With Practice</strong>
+            <p>These 7 steps get you about 65% of the way to your $12,000/month target. The rest comes naturally as you build new habits — reviewing spending each quarter, being more intentional with purchases, and staying aware of where the money goes. This isn't a one-time fix; it's the start of a new pattern.</p>
+        </div>
+    </div>
+
+    <!-- PAGE 5: THE ROADMAP -->
+    <div class="page">
+        <h2>Your Roadmap to $2 Million</h2>
+
+        <p class="emphasis">
+            Reducing spending is Phase 1. The <span class="highlight-text">really big opportunities</span>
+            come in the next phases:
+        </p>
+
+        <div class="roadmap">
+            <div class="roadmap-item current">
+                <div class="roadmap-card">
+                    <div class="roadmap-title" style="color: var(--success);">Phase 1: Reduce Spending — You Are Here</div>
+                    <p style="color: var(--text-light);">Close PayPal, set $300/month budgets for Apple and Temu, review subscriptions.<br><strong>Goal:</strong> $16,679/mo → $12,000/mo</p>
+                    <div class="roadmap-impact">$36,500–$37,500/year in savings</div>
+                </div>
+            </div>
+
+            <div class="roadmap-item future">
+                <div class="roadmap-card">
+                    <div class="roadmap-title" style="color: var(--primary);">Phase 2: Make Your Money Work</div>
+                    <p style="color: var(--text-light);">Full investment audit of your $400–550K in cash. Investigate options with Caryn to find the safest, best-returning choices — HYSAs, CDs, bonds, and more.</p>
+                    <div class="roadmap-impact">$16,000–$33,000/year potential</div>
+                </div>
+            </div>
+
+            <div class="roadmap-item future">
+                <div class="roadmap-card">
+                    <div class="roadmap-title" style="color: var(--accent);">Phase 3: Tax Optimization</div>
+                    <p style="color: var(--text-light);">Lower your tax burden through smart strategies: restructure LifeLink partnership, reduce Vivex distribution taxes, form an LLC for home office deductions, claim Vicky's father as a dependent. Find the right CPA to put it all in place.</p>
+                    <div class="roadmap-impact">$20,000–$50,000/year potential</div>
+                </div>
+            </div>
+
+            <div class="roadmap-item future">
+                <div class="roadmap-card">
+                    <div class="roadmap-title" style="color: var(--warning);">Phase 4: Estate Planning</div>
+                    <p style="color: var(--text-light);">Review wills, trusts, beneficiaries. Protect assets for the next generation.</p>
+                    <div class="roadmap-impact">Peace of mind</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="exec-summary" style="margin-top: 2rem; background: var(--gradient-hero); border: none;">
+            <div class="headline" style="color: rgba(255,255,255,0.9); font-size: 1rem;">Total Potential Improvement Across All Phases</div>
+            <div class="subline" style="color: white; font-size: 2.5rem; font-weight: 800;">$72,500 – $120,500/year</div>
+            <p style="margin-top: 0.75rem; font-size: 1.1rem; color: rgba(255,255,255,0.95);">
+                That's an extra <strong>$6,000–$10,000 every month</strong> working toward your future.
+            </p>
+        </div>
+
+        <div class="closing-cta">
+            <h3 style="margin-bottom: 1rem;">Your Action Plan — Next 7-10 Days</h3>
+            <div style="text-align: left; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem 2rem; font-size: 0.95rem;">
+                <div>☐ <strong>Close PayPal account</strong></div>
+                <div>☐ <strong>Call SiriusXM</strong> — ask for loyalty discount</div>
+                <div>☐ <strong>Cancel duplicate Netflix</strong></div>
+                <div>☐ <strong>Remove debit cards</strong> from shopping sites</div>
+                <div>☐ <strong>Cancel ESPN, NFL+</strong> (covered by YouTube TV)</div>
+                <div>☐ <strong>Set $300/month Apple budget</strong></div>
+                <div>☐ <strong>Downgrade Paramount+</strong> to Essential</div>
+                <div>☐ <strong>Set $300/month Temu budget</strong></div>
+                <div>☐ <strong>Review:</strong> Rocket Money, Il Makiage, Fox Nation, Stretched Fusion</div>
+                <div>☐ <strong>Set $400/month cash budget</strong></div>
+            </div>
+            <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.2); font-size: 0.95rem;">
+                <strong>7-Day Check-In:</strong> We'll review progress and answer questions.<br>
+                <strong>Then:</strong> Phase 2 — investment audit to make your $400–550K work for you.<br>
+                <strong>Quarterly Spending Reviews:</strong> End of March, June, September, December.
+            </div>
+        </div>
+
+        <div style="margin-top: 2rem; text-align: center; font-size: 0.75rem; color: var(--text-muted);">
+            This analysis is for informational purposes only and does not constitute professional financial, tax, or legal advice. Consult with qualified professionals before making significant financial decisions.
+        </div>
+    </div>
+
+</body>
+</html>
